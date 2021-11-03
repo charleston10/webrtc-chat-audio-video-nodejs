@@ -1,0 +1,11 @@
+version: '2'
+
+services:
+  server-webrtc:
+    build: .
+    container_name: server-webrtc
+    command: npm run start:dev
+    volumes:
+      - .:/usr/src/app
+    ports:
+      - "8081:8080"
