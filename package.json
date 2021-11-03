@@ -1,0 +1,20 @@
+{
+  "name": "webrtc-chat-audio-video-nodejs",
+  "version": "1.0.0",
+  "description": "Video call with chat",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/charleston10/webrtc-chat-audio-video-nodejs.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/charleston10/webrtc-chat-audio-video-nodejs/issues"
+  },
+  "homepage": "https://github.com/charleston10/webrtc-chat-audio-video-nodejs#readme"
+}
