@@ -1,9 +1,18 @@
-import { Injectable } from '@nestjs/common';
+import {Injectable} from '@nestjs/common';
 
 
 @Injectable()
 export class AppService {
 
-    constructor() {    }
+    constructor() {
+    }
+
+    connect(id: string, localDescription: string){
+
+    }
+
+    disconnect(id: string){
+
+    }
 
 }

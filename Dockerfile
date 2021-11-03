@@ -1,7 +1,7 @@
-FROM node:17
+FROM node:14
 
 WORKDIR /usr/src/app
 
 COPY . .
 
-RUN npm install --only=dev
+RUN npm install
