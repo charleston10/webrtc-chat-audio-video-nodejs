@@ -5,7 +5,8 @@
   "main": "index.js",
   "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc",
+    "start": "tsc -w"
   },
   "repository": {
     "type": "git",
@@ -16,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/charleston10/webrtc-chat-audio-video-nodejs/issues"
   },
-  "homepage": "https://github.com/charleston10/webrtc-chat-audio-video-nodejs#readme"
+  "homepage": "https://github.com/charleston10/webrtc-chat-audio-video-nodejs#readme",
+  "devDependencies": {
+    "typescript": "^4.4.4"
+  }
 }
