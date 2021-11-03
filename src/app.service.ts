@@ -1,4 +1,5 @@
 import {Injectable} from '@nestjs/common';
+import { v4 as uuidv4 } from 'uuid';
 
 
 @Injectable()
@@ -7,8 +8,8 @@ export class AppService {
     constructor() {
     }
 
-    connect(id: string, localDescription: string){
-
+    connect(localDescription: string){
+       let uuid = uuidv4(); 
     }
 
     disconnect(id: string){

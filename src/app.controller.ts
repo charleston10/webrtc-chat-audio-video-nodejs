@@ -21,11 +21,16 @@ export class AppController {
 
     @Post('connect')
     async connect(@Body() dto: ConnectDto) {
-        this.appService.connect(dto.id, dto.localDescription)
+        this.appService.connect(dto.localDescription)
     }
 
     @Post('disconnect')
     async disconnect(@Body() dto: DisconnectDto) {
         this.appService.disconnect(dto.id)
+    }
+
+    @Post('pair')
+    async pair(){
+        
     }
 }
