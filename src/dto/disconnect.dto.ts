@@ -1,3 +1,0 @@
-interface DisconnectDto {
-    id: string,
-}
