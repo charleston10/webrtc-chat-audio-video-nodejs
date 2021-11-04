@@ -19,6 +19,12 @@ export class AppController {
             })
     }
 
+    @Get('connections')
+    async connections(@Res() res: Response) {
+        const result = this.appService.connections();
+        return res.status(HttpStatus.OK).json(result)
+    }
+
     @Post('connect')
     async connect(@Body() dto: ConnectDto) {
         this.appService.connect(dto.localDescription)
@@ -30,7 +36,7 @@ export class AppController {
     }
 
     @Post('pair')
-    async pair(){
-        
+    async pair() {
+
     }
 }
