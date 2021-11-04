@@ -1,3 +1,5 @@
 interface ConnectDto {
-    localDescription: string
+    name: string,
+    photoUrl: string,
+    connection: string,
 }

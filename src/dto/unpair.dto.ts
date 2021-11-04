@@ -1,0 +1,3 @@
+interface UnpairDto {
+    id: string,
+}

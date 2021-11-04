@@ -1,4 +1,4 @@
-import {Body, Controller, Get, HttpStatus, Post, Res} from '@nestjs/common';
+import {Body, Controller, Delete, Get, HttpStatus, Post, Res} from '@nestjs/common';
 import {Response} from 'express';
 import {AppService} from './app.service';
 
@@ -27,16 +27,36 @@ export class AppController {
 
     @Post('connect')
     async connect(@Body() dto: ConnectDto) {
-        this.appService.connect(dto.localDescription)
+        this.appService.connect(dto.name, dto.photoUrl, dto.connection)
     }
 
     @Post('disconnect')
-    async disconnect(@Body() dto: DisconnectDto) {
+    async disconnect(@Body() dto: DisconnectDto, @Res() res: Response) {
         this.appService.disconnect(dto.id)
+        return res.status(HttpStatus.OK).send()
     }
 
     @Post('pair')
-    async pair() {
+    async pair(@Body() dto: PairDto, @Res() res: Response) {
+        this.appService.pair(dto.myId, dto.pairId)
 
+        return res.status(HttpStatus.OK)
+            .json({
+                "paired": true,
+                ...dto
+            })
+    }
+
+    @Post('unpair')
+    async unpair(@Body() dto: UnpairDto, @Res() res: Response) {
+        this.appService.unpair(dto.id);
+
+        return res.status(HttpStatus.OK).send();
+    }
+
+    @Delete('connections')
+    async clear(@Res() res: Response) {
+        this.appService.clear()
+        return res.status(HttpStatus.OK).send()
     }
 }
